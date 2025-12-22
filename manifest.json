@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "ParamX",
+  "version": "1.0",
+  "description": "精准提取JS文件中的接口参数，用于未授权漏洞挖掘",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "提取接口参数",
+    "default_icon": {
+      "16": "ico/icon.png",
+      "32": "ico/icon.png",
+      "48": "ico/icon.png",
+      "128": "ico/icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
